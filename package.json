@@ -1,6 +1,8 @@
 {
-  "name": "app-builder-workspace",
+  "name": "klangyu",
+  "version": "0.1.0",
   "private": true,
+  "description": "Local-first music player with intelligent automix",
   "sideEffects": false,
   "type": "module",
   "overrides": {
