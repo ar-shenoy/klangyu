@@ -1,5 +1,38 @@
+# Dependencies
 node_modules/
-.project_id
-.github_repo
+
+# Environment
 .env
 .env.*
+.project_id
+.github_repo
+
+# Grok / App Builder sandbox (do not publish)
+.grok/
+AGENTS.md
+AGENTS.project.md
+
+# Build & deploy artifacts
+.vercel/
+dist/
+.output/
+.nitro/
+
+# Local / temporary
+artifacts/
+screenshots/
+attachments/
+*.log
+.node_modules.lock
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# TypeScript / test
+*.tsbuildinfo
+coverage/
