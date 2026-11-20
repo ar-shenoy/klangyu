@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Klangyu",
+      "hasCanvas": false,
+      "bodyTextLen": 425,
+      "bodyTextHash": "c4ab7baadf0968089d4b47b29e82a7dc1859e7df2c650f833cddfaf10254adda",
+      "bodyTextPrefix": "Klangyu Your realm of sound Music, analysis and listening histor",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Klangyu",
+      "hasCanvas": false,
+      "bodyTextLen": 276,
+      "bodyTextHash": "1b1a5d252c23cad4c0137269e52c1363cd5949711981a71b3a402654818f1ad9",
+      "bodyTextPrefix": "Skip STEP 1 / 4 Your music, understood Your realm of sound The m",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

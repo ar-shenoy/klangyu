@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Klangyu</title>
+    <style>
+      @font-face {
+        font-family: "Jost";
+        src: url("./fonts/Jost-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: #14161c;
+      }
+      .stage {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        background:
+          radial-gradient(ellipse at 50% 46%, #1c2030 0%, #14161c 58%);
+      }
+      svg.field {
+        position: absolute;
+        inset: 0;
+        width: 1200px;
+        height: 630px;
+      }
+      .lockup {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .seal { width: 132px; height: 132px; display: block; }
+      h1 {
+        margin: 26px 0 0;
+        font-family: "Jost", "Liberation Sans", sans-serif;
+        font-weight: 500;
+        font-size: 164px;
+        line-height: 0.9;
+        letter-spacing: 0.035em;
+        color: #f4f1ea;
+        padding-left: 0.035em;
+      }
+      .rule {
+        width: 56px;
+        height: 1px;
+        margin-top: 22px;
+        background: #c9a24b;
+      }
+      p {
+        margin: 16px 0 0;
+        font-family: "Jost", "Liberation Sans", sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: 0.28em;
+        color: #c9a24b;
+        padding-left: 0.28em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <svg class="field" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <radialGradient id="quiet" cx="50%" cy="46%" r="62%">
+            <stop offset="0%" stop-color="#000" stop-opacity="1"/>
+            <stop offset="42%" stop-color="#000" stop-opacity="1"/>
+            <stop offset="68%" stop-color="#000" stop-opacity="0"/>
+          </radialGradient>
+          <mask id="grooves">
+            <rect width="1200" height="630" fill="#fff"/>
+            <rect width="1200" height="630" fill="url(#quiet)"/>
+          </mask>
+        </defs>
+        <g mask="url(#grooves)" fill="none" stroke-linecap="round">
+          <g transform="translate(600 300)">
+            <circle r="520" stroke="#3C5A78" stroke-width="1.25" opacity="0.55"/>
+            <circle r="492" stroke="#3C5A78" stroke-width="0.8" opacity="0.28"/>
+            <circle r="468" stroke="#C9A24B" stroke-width="0.7" opacity="0.35"/>
+            <circle r="444" stroke="#3C5A78" stroke-width="1.1" opacity="0.4"/>
+            <circle r="420" stroke="#3C5A78" stroke-width="0.7" opacity="0.22"/>
+            <circle r="398" stroke="#3C5A78" stroke-width="1" opacity="0.34"/>
+            <circle r="376" stroke="#3C5A78" stroke-width="0.6" opacity="0.18"/>
+            <circle r="356" stroke="#C9A24B" stroke-width="0.6" opacity="0.22"/>
+            <circle r="336" stroke="#3C5A78" stroke-width="0.9" opacity="0.28"/>
+            <circle r="316" stroke="#3C5A78" stroke-width="0.6" opacity="0.16"/>
+          </g>
+        </g>
+      </svg>
+      <div class="lockup">
+        <svg class="seal" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="7" fill="#101218" stroke="#F4F1EA" stroke-width="1.15"/>
+          <g fill="none" stroke="#F4F1EA" stroke-width="3.15" stroke-linecap="round">
+            <path d="M10.15 7.4v17.2"/>
+            <path d="M11.15 16.05 20.7 8.7"/>
+            <path d="M11.15 16.05 19.85 22.35"/>
+          </g>
+          <rect x="23.15" y="23.15" width="4.85" height="4.85" fill="#D8342C"/>
+        </svg>
+        <h1>Klangyu</h1>
+        <div class="rule"></div>
+        <p>Your realm of sound</p>
+      </div>
+    </div>
+  </body>
+</html>

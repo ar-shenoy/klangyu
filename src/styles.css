@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-ink: #14161c;
+  --color-paper: #f4f1ea;
+  --color-cinnabar: #d8342c;
+  --color-brass-ui: #c9a24b;
+  --color-mist-ui: #3c5a78;
+  --color-market: #a3201c;
+  --color-harbor: #8aa4be;
+  --color-scrim: rgb(8 9 12 / 72%);
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #14161c;
+  --fg: #f4f1ea;
+  --muted: #a39e93;
+  --surface: #1c1f28;
+  --surface-2: #262a34;
+  --line: #343846;
+  --accent: #e24b43;
+  --accent-fg: #14161c;
+  --brass-ui: #c9a24b;
+  --mist-ui: #8aa4c0;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f1ea;
+  --fg: #14161c;
+  --muted: #5c584f;
+  --surface: #ebe6dc;
+  --surface-2: #e2dcd0;
+  --line: #d4cbbc;
+  --accent: #d8342c;
+  --accent-fg: #f4f1ea;
+  --mist-ui: #3c5a78;
+}
+
+:root[data-theme="amoled"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0c0c0e;
+  --surface-2: #16161a;
+  --line: #2a2a30;
+}
+
+:root[data-palette="mist"] {
+  --accent: #3c5a78;
+  --accent-fg: #f4f1ea;
+}
+:root[data-palette="brass"] {
+  --accent: #c9a24b;
+  --accent-fg: #14161c;
+}
+:root[data-palette="market"] {
+  --accent: #e24b43;
+  --accent-fg: #14161c;
+}
+:root[data-palette="harbor"] {
+  --accent: #8aa4be;
+  --accent-fg: #14161c;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-fg);
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2.75rem;
+  margin: 0;
+  background: transparent;
+}
+
+input[type="range"]:focus-visible {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.2rem;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: -0.48rem;
+  border: 2px solid var(--bg);
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+input[type="range"]::-moz-range-track {
+  height: 0.2rem;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 2px solid var(--bg);
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.eq-bars span {
+  transform-origin: bottom;
+  animation: eqbar 0.85s ease-in-out infinite alternate;
+}
+
+.eq-bars span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.eq-bars span:nth-child(3) {
+  animation-delay: 0.28s;
+}
+
+@keyframes eqbar {
+  from {
+    transform: scaleY(0.35);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.eq-bars rect {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: eqbar 0.8s ease-in-out infinite alternate;
+}
+
+.eq-bars rect:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.eq-bars rect:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+input.eq-vert {
+  width: 2.75rem;
+  height: 9.5rem;
+  writing-mode: vertical-lr;
+  direction: rtl;
+}
+
+.story-scroll {
+  scroll-snap-type: x mandatory;
+}
+
+.story-scroll > * {
+  scroll-snap-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
